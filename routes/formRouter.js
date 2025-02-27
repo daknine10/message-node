@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { messages } from "./app.js"
+import { messages } from "../app.js"
 
 const formRouter = Router();
 
