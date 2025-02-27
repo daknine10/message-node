@@ -1,19 +1,19 @@
-import { getUserByName } from "../app.js";
 import db from "../db/queries.js"
 
 const title = "Message App"
 
 async function getUserName(req, res) {
-    const { userName } = req.params;
+    const { username } = req.params;
 
-    const user = await getUserByName(String(userName));
+    const message = await db.getUserByName(username);
+    console.log(message)
 
-    if (!user) {
+    if (!message) {
         res.status(404).send("User not found");
         return
     }
 
-    res.render("detailedMessage", { user: user.user, text: user.text, date: user.date })
+    res.render("detailedMessage", { message: message })
 }
 
 async function getMessages(req, res) {

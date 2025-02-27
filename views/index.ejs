@@ -10,10 +10,10 @@
     <div>
         <h1><%= title %></h1>
         <% for (let message of messages) { %>
-            <h2><%= message.user %> </h1>
+            <h2><%= message.username %> </h1>
             <p><%= message.text %></p>
             <p><%= message.added %></p>
-            <a class="button" href="/<%= message.user %>">Open</a>
+            <a class="button" href="/<%= message.username %>">Open</a>
         <% } %>
     </div>
     <a class="button" href="/new">Add new message</a>

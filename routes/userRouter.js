@@ -3,6 +3,6 @@ import messageController from "../controllers/messageController.js";
 
 const userRouter = Router();
 
-userRouter.get("/:userName", messageController.getUserName)
+userRouter.get("/:username", messageController.getUserName)
 
 export default userRouter

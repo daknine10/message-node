@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { messages } from "../app.js"
+import db from "../db/queries.js"
 
 const formRouter = Router();
 
@@ -7,8 +7,9 @@ formRouter.get("/", (req, res) => {
     res.render("form")
 })
 
-formRouter.post("/", (req, res) => {
-    messages.push({ text: req.body.message, user: req.body.user, added: new Date() })
+formRouter.post("/", async (req, res) => {
+    const { username, message } = req.body
+    await db.insertMessage(username, message)
     res.redirect("/")
 })
 
