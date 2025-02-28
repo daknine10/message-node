@@ -6,7 +6,6 @@ async function getUserName(req, res) {
     const { username } = req.params;
 
     const message = await db.getUserByName(username);
-    console.log(message)
 
     if (!message) {
         res.status(404).send("User not found");

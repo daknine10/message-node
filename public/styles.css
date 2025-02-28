@@ -1,8 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    box-sizing: border-box;
+    padding: 12px;
+}
+
 .button {
     padding: 1px 6px;
     border: 1px outset buttonborder;
+    margin-top: 20px;
     border-radius: 3px;
     color: buttontext;
     background-color: buttonface;
     text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    place-content: center;
+    place-items: center;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    border: 1px solid black;
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+h1 {
+    border-bottom: 2px solid black;
 }
